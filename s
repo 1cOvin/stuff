@@ -3,7 +3,7 @@ spyOnMyself = true
 public = false
 publicItalics = true
 privateProperties = {
-	Color = Color3.fromRGB(0,255,255); 
+	Color = Color3.fromRGB(255,0,0); 
 	Font = Enum.Font.SourceSansBold;
 	TextSize = 18;
 }
@@ -51,7 +51,7 @@ end
 Players.PlayerAdded:Connect(function(p)
 	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
 end)
-privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+privateProperties.Text = "{Message Logger "..(enabled and "En" or "DIS").."abled}"
 StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
 local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
